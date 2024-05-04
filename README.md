@@ -1,3 +1,5 @@
+# Niralya Sundararajan
+
 ## 1. Your role in the project
 For this project, I served as one of the programmers on the tech side. I was also the team face for communicating with the professors and designing/updating the site. My responsibility as a programmer was to implement the ground level features to make sure the game properly worked rather than the runes, which were more of the unique abilities. Some examples of what I did are applying meshes and animations, creating the ability to switch between levels using triggerboxes (and refining that later in the process to create specific start points to create a sense of progression and flow between levels), creating and refining the golem blueprint to give them proper AI, and implementing a proper game instance in order to save variables across levels. <br> <br>
 ## 2. The challenges you faced <br>
