@@ -14,6 +14,8 @@ I addressed the progression issue with two of unreal’s built in classes: The G
 The Implementation of the GameInstance involved the calling of Events created in the ThirdPersonCharacter, which were bound to certain event calls. These would update and store these values in the game instance, where they would then be set to the player to be called once the level changed. These are included below: <br>
 ![Health](/images/ThirdPersonCharacterHealth) <br>
 ![Collectibles](/images/Collectibles) <br>
+Here is an example of the health event being called, when the golem attacks the player: <br>
+![Golem](/images/GolemHealthGameInstance) <br>
 As for preventing the player for restarting from the bottom of the cave, what we used was a blueprint triggerbox that was set up to take both a level name and PlayerStart using a specific string. This allowed us to both create a default LevelStart on Startup as well as allow the player to start from a specific location once they had exited the cave at least once.  <br>
 ![LevelChange](/images/LevelChange) <br>
 Below is the code we used to make sure that a specific PlayerStart was used on startup: <br>
@@ -21,7 +23,18 @@ Below is the code we used to make sure that a specific PlayerStart was used on s
 
 ## 4. An architectural diagram(s) that roughly portrays the architecture of your final project and then shows the design of your specific parts in more detail. This might include UML, control flow diagram, networking diagrams etc. <br>
 
-Here is a broad overview UML Diagram: 
-![UML](/images/ScalingTheSummitUML)
+Here is a broad overview UML Diagram: <br>
+![UML](/images/ScalingTheSummitUML) <br> <br>
 
-Here is a detailed overview of the GameInstance: 
+Here is a detailed overview of the GameInstance's UML diagram:  <br>
+![UML_detail](/images/GameInstanceUML) <br> <br>
+
+## 5. Lessons learned: how should students facing similar challenges in the future tackle the problems you faced?
+I would say that when it comes to the distribution of work, you should plan early, discuss often with your team, and make sure everyone is on the same page before moving forward. Please research version control in detail before deciding to stick to one, as it can avoid a lot of pain that will occur during the process. I will discuss this in the next section. <br>
+If you think of something theoretically that you would like to implement but don't know how to, I recommend messing with unreal's features yourself for a little bit before looking up a tutorial. It allows you to familiarize yourself more deeply with the program so that you'd know how to edit the implementation to your own liking, alongside preventing hours of pain trying to debug something. <br>
+I would recommend trying not to overload during this class. It is technically demanding and you'd want to be able to contribute your fullest to the team. <br>
+For your alpha, make sure that your game actually has a gameplay loop implemented, and focus on prioritizing that over polish. The game should be playable first, and look good second. This is a trap we fell into that caused our alpha to feel rather flat. 
+Finally, don't be afraid to ask the professors for advice or help. They're a great resource and have so much experience that they'll always be able to help you figure out something. 
+
+## 6. Describe your version control choice, and your experience with it.
+Version control was a huge problem with our team, and it led to a lot of confusion amongst tech and art. As tech students, having knowledge of version control should be our responsibility, as this is something we will use often going into our future careers. We originally started out trying to use Git LFS, but unfortunately did not use the correct Gitignores, causing my Git LFS bandwith to overload, which banned me personally from uploading any files into that repository for the entirety of the class. We ended up using google drive, and this was a big mistake. We should have looked into using perforce or another method. For google drive, we uploaded all our assets into labeled folders while constantly exchanging our current implementation versions with each other on the tech side. The only reason this worked out was due to the fact that we all worked on separate blueprints (barring ThirdPersonCharacter), but it led to a lot of pain when merging. We would routinely have multiple-hour meetings just merging our versions of code together, something that a version control system would have done automatically. In addition, saving various versions of the game took up a lot of space not only on our hard drives but also on Google Drive, which took up a LOT of space overall (For me, it was over 100 Gigabytes on my hard drive). I would not recommend using this to other groups, and gaining familiarity with github or other version control methods would help you in the future and save a lot of trouble in this class. 
