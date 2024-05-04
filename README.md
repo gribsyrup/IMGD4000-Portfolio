@@ -22,3 +22,6 @@ Below is the code we used to make sure that a specific PlayerStart was used on s
 ## 4. An architectural diagram(s) that roughly portrays the architecture of your final project and then shows the design of your specific parts in more detail. This might include UML, control flow diagram, networking diagrams etc. <br>
 
 Here is a broad overview UML Diagram: 
+![UML](/images/ScalingTheSummitUML)
+
+Here is a detailed overview of the GameInstance: 
